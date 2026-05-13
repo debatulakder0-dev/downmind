@@ -1,23 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
-let supabaseInstance: ReturnType<typeof createClient> | null = null;
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 
+  'https://xhbzfdjwuaejhysxtrfl.supabase.co';
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || 
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhoYnpmZGp3dWFlamh5c3h0cmZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2MDEwNzIsImV4cCI6MjA5NDE3NzA3Mn0.zjhuKvgpL-g9XTxTKU36bqMb32RwCFtsfJ5cpQ6zMeg';
 
-export const getSupabase = () => {
-  if (supabaseInstance) return supabaseInstance;
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-  const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    console.warn('Supabase URL or Anon Key is missing. Database features will be disabled until configured.');
-    return null;
-  }
-
-  supabaseInstance = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  return supabaseInstance;
-};
-
-// Generate unique device ID
 export const getDeviceId = () => {
   let id = localStorage.getItem('dawnmind_device_id');
   if (!id) {
