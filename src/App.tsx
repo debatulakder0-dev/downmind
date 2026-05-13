@@ -14,21 +14,17 @@ const ASSETS = {
     'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/japanese_garden.mp4'
   ],
   mala: {
-    idle: 'mala_idle.png',
-    wave: 'mala_wave.png',
-    thumbsup: 'mala_thumbsup.png',
-    remind: 'mala_remind.png',
-    confused: 'mala_confused.png',
-    celebrate: 'mala_celebrate.png'
-  },
-  joseph: {
-    idle: 'joseph_idle.png',
-    fist: 'joseph_fist.png',
-    point: 'joseph_point.png',
-    arms: 'joseph_arms.png',
-    confused: 'joseph_confused.png',
-    celebrate: 'joseph_celebrate.png'
-  }
+  idle: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/mala_idle.png',
+  wave: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/mala_wave.png',
+  thumbsup: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/mala_thumbsup.png',
+  remind: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/mala_remind.png'
+},
+joseph: {
+  idle: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/joseph_idle.png',
+  fist: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/joseph_fist.png',
+  point: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/joseph_point.png',
+  arms: 'https://xhbzfdjwuaejhysxtrfl.supabase.co/storage/v1/object/public/elevenhacks/joseph_arms.png'
+}
 };
 
 const MALA_VOICE_ID = "pPdl9cQBQq4p6mRkZy2Z";
