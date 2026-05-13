@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Mic, Settings, Play, CheckCircle2, Circle, Volume2, VolumeX } from 'lucide-react';
 import { UserProfile, Todo, Pose } from './types';
 import { VoiceService } from './services/voiceService';
-import { getSupabase, getDeviceId } from './lib/supabase';
-
+import { getDeviceId } from './lib/supabase';
 // Fallback image placeholders since generation failed
 const ASSETS = {
   videos: [
