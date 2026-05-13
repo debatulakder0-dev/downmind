@@ -15,3 +15,4 @@ export const getDeviceId = () => {
   }
   return id;
 };
+export const getSupabase = () => supabase;
